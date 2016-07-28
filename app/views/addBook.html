@@ -21,7 +21,30 @@
             <div class="row">
             <p style="text-align:right"> Welcome: <span class="boldme">{{ session['name']}}</span> - ({{ session['id']}}) - <a href="/dashboard">Home</a> - <a href="/logout">Logout</a></p>
             </div>
-            <div class="row"><h3>Information will go here</h3></div>
+            <form action="/addBookReview" method="POST">
+                <div class="row"><h3>Add New Book Title and Review:</h3></div>
+                <div class="row"><p>Book Title: <input type="text" name="title"></p></div>
+                <div class="row"><p>Author: </p></div>
+                <div class="row"><p>Choose from the list: 
+                    <select>
+                        <option>Author name</option>
+                    </select>
+                    </p>
+                </div>
+                <div class="row"><p>Or add a new author: <input type="text" name="author"></p></div>
+                <div class="row"><p>Review: <input type="text" name="review"></p></div>
+                <div class="row"><p>Rating: 
+                    <select>
+                        <option>5</option>
+                        <option>4</option>
+                        <option selected>3</option>
+                        <option>2</option>
+                        <option>1</option>
+                    </select>
+                    stars.</p>
+                    <div class="row"><input type="submit" value="Add Book and Review"=""></div>
+                </div>
+            </form>
         </div><!-- end of main content-->
         <div class="footer">
             <p>created by: Amanda Fry</p>

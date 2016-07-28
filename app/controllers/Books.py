@@ -14,6 +14,12 @@ class Books(Controller):
             return redirect ('/')
         return self.load_view('dashboard.html')
 
+    def addBooks(self):
+        return self.load_view('addBook.html')
+
+    def addBookReview(self):
+        return self.load_view('bookDetail.html')
+
     def details(self,id):
         pass
 

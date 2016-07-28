@@ -19,11 +19,26 @@
         </div><!-- end of header content-->
         <div class="maincontent">
             <div class="row">
-            <p style="text-align:right"> Welcome: <span class="boldme">{{ session['name']}}</span> - ({{ session['id']}}) - <a href="/logout">Logout</a></p>
+            <p style="text-align:right"> Welcome: <span class="boldme">{{ session['name']}}</span> - ({{ session['id']}}) - <a href="/addBooks">Add Book with Review</a> - <a href="/logout">Logout</a></p>
             </div>
-
-            <div class="row"><h3>Information will go here</h3></div>
-            
+            <div class="column">
+                <div class="row"><h3>Recent Book Reviews:</h3></div>
+                {% if reviewedBooks %}
+                    {% for rbook in reviewedBooks %}
+                        <div class="row"><h3><a href="">Book name</a></h3></div>
+                        <div class="row"><p>Rating: number</p></div>
+                        <div class="row"><p><a href="">Person name</a> review</p></div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="column">
+                <div class="row"><h3>Other Books with reviews:</h3></div>
+                {% if otherBooks %}
+                    {% for obook in otherBooks %}
+                       <div class="row"><p><a href="">Person name</a> review</p></div>
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div><!-- end of main content-->
         <div class="footer">
             <p>created by: Amanda Fry</p>

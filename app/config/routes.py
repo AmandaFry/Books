@@ -5,6 +5,8 @@ routes['POST']['/login'] = 'User#processLogin'
 routes['POST']['/register'] = 'User#processRegister'
 routes['GET']['/logout'] = 'User#logout'
 routes['GET']['/dashboard'] = 'Books#dashboard'
+routes['GET']['/addBooks'] = 'Books#addBooks'
+routes['POST']['/addBookReview'] = 'Books#addBookReview'
 routes['GET']['/details/<id>'] = 'Books#details'
 routes['GET']['/add/<id>'] = 'Books#addReview'
 
