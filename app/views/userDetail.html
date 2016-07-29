@@ -11,7 +11,7 @@
 <body>	
     <div class="container">
         <div class="header">
-            <h1><span>(Pylot) </span> User detail and books they reviwed</h1>
+            <h1><span>(Pylot) </span> User Details</h1>
             <h3>Assigment - optional</h3>
             <div class="descr">
                 <p>Assigment description: </p>
@@ -21,7 +21,16 @@
             <div class="row">
             <p style="text-align:right"> Welcome: <span class="boldme">{{ session['name']}}</span> - ({{ session['id']}}) - <a href="/dashboard">Home</a> - <a href="/logout">Logout</a></p>
             </div>
-            <div class="row"><h3>Information will go here</h3></div>
+            <div class="row"><h3>User Alias: </h3></div>
+            <div class="row"><p>Name: </p></div>
+            <div class="row"><p>Email: </p></div>
+            <div class="row"><p>Total Reviews: </p></div>
+            <div class="row"><h3>Posted Reviews on the following books: </h3></div>
+            {% if myreviews %}
+                {% for myre in myreviews %}
+                    <div class="row"><p><a href="">my review</a></p></div><a href="/addBooks">Add Book with Review</a> - 
+                {% endfor %}
+            {% endif %}
         </div><!-- end of main content-->
         <div class="footer">
             <p>created by: Amanda Fry</p>

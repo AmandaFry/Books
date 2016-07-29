@@ -20,8 +20,8 @@ class Books(Controller):
     def addBookReview(self):
         return self.load_view('bookDetail.html')
 
-    def details(self,id):
-        pass
+    def userDetails(self,id):
+        return self.load_view('userDetails.html')
 
-    def addReview(self, id):
+    def bookDetails(self, id):
         pass
